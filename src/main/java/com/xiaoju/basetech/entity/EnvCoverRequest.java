@@ -13,4 +13,14 @@ public class EnvCoverRequest extends CoverBaseRequest{
     private String address;
     private int port;
 
+    /**
+     * 环境变量
+     */
+    private String environment;
+
+    /**
+     * 额外的参数
+     */
+    private String extra;
+
 }

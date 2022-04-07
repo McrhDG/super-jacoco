@@ -291,6 +291,14 @@ public class CodeCovServiceImpl implements CodeCovService {
                 coverageReport.setSubModule(envCoverRequest.getSubModule());
             }
 
+            if (!StringUtils.isEmpty(envCoverRequest.getEnvironment())) {
+                coverageReport.setEnvironment(envCoverRequest.getEnvironment());
+            }
+
+            if (!StringUtils.isEmpty(envCoverRequest.getExtra())) {
+                coverageReport.setExtra(envCoverRequest.getExtra());
+            }
+
             if (envCoverRequest.getBaseVersion().equals(envCoverRequest.getNowVersion()) && envCoverRequest.getType() == Constants.ReportType.DIFF.val()) {
                 coverageReport.setBranchCoverage((double) 100);
                 coverageReport.setLineCoverage((double) 100);

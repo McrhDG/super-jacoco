@@ -38,5 +38,15 @@ public class CoverageReportEntity {
     private String reportFile;
     private Integer from;
     private String logFile = "";
+
+    /**
+     * 环境变量
+     */
+    private String environment;
+
+    /**
+     * 额外的参数
+     */
+    private String extra;
     
 }
