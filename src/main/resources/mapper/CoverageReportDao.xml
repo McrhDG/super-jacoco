@@ -21,6 +21,8 @@
         <result column="update_time" property="updateTime"/>
         <result column="from" property="from"/>
         <result column="log_file" property="logFile"/>
+        <result column="environment" property="environment"/>
+        <result column="extra" property="extra"/>
 
     </resultMap>
 
@@ -55,6 +57,8 @@
         `now_version`,
         `now_local_path` ,
         `base_local_path`,
+        `environment`,
+        `extra`,
         `from`
         )VALUES (
         #{coverageReportEntity.uuid},
@@ -67,7 +71,9 @@
         #{coverageReportEntity.nowVersion},
         #{coverageReportEntity.nowLocalPath},
         #{coverageReportEntity.baseLocalPath},
-        #{coverageReportEntity.from}
+        #{coverageReportEntity.from},
+        #{coverageReportEntity.environment},
+        #{coverageReportEntity.extra}
         )
     </insert>
 
